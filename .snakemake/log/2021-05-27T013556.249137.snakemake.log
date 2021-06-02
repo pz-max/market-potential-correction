@@ -1,0 +1,8 @@
+Building DAG of jobs...
+InputFunctionException in line 30 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Error:
+  TypeError: unsupported operand type(s) for -: 'str' and 'int'
+Wildcards:
+  iterations=2
+Traceback:
+  File "C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile", line 26, in input_solve_iterations

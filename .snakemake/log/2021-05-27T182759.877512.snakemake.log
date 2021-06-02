@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	solve_all_iterations
+	3	solve_iterations
+	4
+
+[Thu May 27 18:28:00 2021]
+rule solve_iterations:
+    input: pypsa-eur/networks/elec_s_5_ec_lcopt_Co2L-24H.nc, data/curve.csv, data/costs.csv
+    output: iterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc
+    log: logs\solve_iterations\elec_s_5_ec_lcopt_Co2L-24H_0_solver.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_python.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_memory.log
+    jobid: 1
+    wildcards: iterations=0
+
+Opening notebook for editing.
+Saving modified notebook.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 31 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Job Missing files after 5 seconds:
+iterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 1 completed successfully, but some output files are missing. 1
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 581, in handle_job_success
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 252, in handle_job_success
+Terminating processes on user request, this might take some time.
+Complete log: C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\.snakemake\log\2021-05-27T182759.877512.snakemake.log

@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 31 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Missing input files for rule solve_iterations:
+pypsa-eur/networks/elec_s_5_ec_lcopt_Co2L-24H.nciterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc

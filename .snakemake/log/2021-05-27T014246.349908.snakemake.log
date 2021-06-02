@@ -1,0 +1,3 @@
+Building DAG of jobs...
+CyclicGraphException in line 30 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Cyclic dependency on rule solve_iterations.
