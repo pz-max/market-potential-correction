@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	solve_all_iterations
+	1	solve_iterations
+	2
+
+[Thu May 27 01:52:44 2021]
+rule solve_iterations:
+    input: iterations/elec_s_5_ec_lcopt_Co2L-24H_2.nc, data/curve.csv, data/costs.csv
+    output: iterations/elec_s_5_ec_lcopt_Co2L-24H_3.nc
+    log: logs\solve_iterations\elec_s_5_ec_lcopt_Co2L-24H_3_solver.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_3_python.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_3_memory.log
+    jobid: 1
+    wildcards: iterations=3
+
+[Thu May 27 01:52:57 2021]
+Finished job 1.
+1 of 2 steps (50%) done
+
+[Thu May 27 01:52:57 2021]
+localrule solve_all_iterations:
+    input: iterations/elec_s_5_ec_lcopt_Co2L-24H_3.nc
+    jobid: 0
+
+[Thu May 27 01:52:57 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\.snakemake\log\2021-05-27T015243.657912.snakemake.log
