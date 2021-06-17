@@ -1,0 +1,3 @@
+WorkflowError in line 10 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Config file config.yaml not found.
+  File "C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile", line 10, in <module>

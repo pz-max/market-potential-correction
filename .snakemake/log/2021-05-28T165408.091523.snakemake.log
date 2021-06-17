@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	solve_all_iterations
+	3	solve_iterations
+	4
+
+[Fri May 28 16:54:08 2021]
+rule solve_iterations:
+    input: pypsa-eur/networks/elec_s_5_ec_lcopt_Co2L-24H.nc, data/curve.csv, data/costs.csv
+    output: iterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc
+    log: logs\solve_iterations\elec_s_5_ec_lcopt_Co2L-24H_0_solver.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_python.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_memory.log
+    jobid: 1
+    wildcards: iterations=0
+
+[Fri May 28 16:54:12 2021]
+Error in rule solve_iterations:
+    jobid: 1
+    output: iterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc
+    log: logs\solve_iterations\elec_s_5_ec_lcopt_Co2L-24H_0_solver.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_python.log, logs/solve_iterations/elec_s_5_ec_lcopt_Co2L-24H_0_memory.log (check log file(s) for error message)
+
+RuleException:
+CalledProcessError in line 43 of C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile:
+Command 'jupyter-nbconvert --log-level ERROR --execute  --to notebook --ExecutePreprocessor.timeout=-1 "C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\.snakemake\scripts\tmpa6ntx4fk.solve_iterations.py.ipynb"' returned non-zero exit status 1.
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 2317, in run_wrapper
+  File "C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\Snakefile", line 43, in __rule_solve_iterations
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 566, in _callback
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\concurrent\futures\thread.py", line 57, in run
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 552, in cached_or_run
+  File "C:\Users\pcpar\anaconda3\envs\pypsa-eur\lib\site-packages\snakemake\executors\__init__.py", line 2348, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\.snakemake\log\2021-05-28T165408.091523.snakemake.log

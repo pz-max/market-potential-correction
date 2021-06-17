@@ -1,0 +1,5 @@
+Building DAG of jobs...
+WorkflowError:
+RecursionError: maximum recursion depth exceeded while calling a Python object
+If building the DAG exceeds the recursion limit, this is likely due to a cyclic dependency.E.g. you might have a sequence of rules that can generate their own input. Try to make the output files more specific. A common pattern is to have different prefixes in the output files of different rules.
+Problematic file pattern: iterations/elec_s_5_ec_lcopt_Co2L-24H_(-485+0j).nc

@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	solve_all_iterations
+	1
+
+[Thu May 27 18:27:28 2021]
+localrule solve_all_iterations:
+    input: iterations/elec_s_5_ec_lcopt_Co2L-24H_0.nc, iterations/elec_s_5_ec_lcopt_Co2L-24H_1.nc, iterations/elec_s_5_ec_lcopt_Co2L-24H_2.nc
+    jobid: 0
+
+[Thu May 27 18:27:28 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: C:\Users\pcpar\Desktop\Tesis\New_Attempt\Independent_convergence\.snakemake\log\2021-05-27T182727.554836.snakemake.log
